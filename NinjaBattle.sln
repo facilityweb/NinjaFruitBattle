@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjaBattle.Windows", "NinjaBattle\NinjaBattle.Windows.csproj", "{5658F88D-F916-4FA0-8991-F0C7D0401DC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjaBattle.Domain", "NinjaBattle.Domain\NinjaBattle.Domain.csproj", "{4366A4F0-1BDF-445A-B73B-D8D0DFCCACEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjaBattle.Test", "NinjaBattle.Test\NinjaBattle.Test.csproj", "{18916D5C-ED74-4D78-AC2C-422C1A0B82D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjaBattle.Droid", "NinjaBattle.Droid\NinjaBattle.Droid.csproj", "{63D1F309-9223-4D47-B901-8886E56AE70F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5658F88D-F916-4FA0-8991-F0C7D0401DC5}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{5658F88D-F916-4FA0-8991-F0C7D0401DC5}.Debug|x86.ActiveCfg = Debug|x86
+		{5658F88D-F916-4FA0-8991-F0C7D0401DC5}.Debug|x86.Build.0 = Debug|x86
+		{5658F88D-F916-4FA0-8991-F0C7D0401DC5}.Release|Any CPU.ActiveCfg = Release|x86
+		{5658F88D-F916-4FA0-8991-F0C7D0401DC5}.Release|x86.ActiveCfg = Release|x86
+		{5658F88D-F916-4FA0-8991-F0C7D0401DC5}.Release|x86.Build.0 = Release|x86
+		{4366A4F0-1BDF-445A-B73B-D8D0DFCCACEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4366A4F0-1BDF-445A-B73B-D8D0DFCCACEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4366A4F0-1BDF-445A-B73B-D8D0DFCCACEB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4366A4F0-1BDF-445A-B73B-D8D0DFCCACEB}.Debug|x86.Build.0 = Debug|Any CPU
+		{4366A4F0-1BDF-445A-B73B-D8D0DFCCACEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4366A4F0-1BDF-445A-B73B-D8D0DFCCACEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4366A4F0-1BDF-445A-B73B-D8D0DFCCACEB}.Release|x86.ActiveCfg = Release|Any CPU
+		{4366A4F0-1BDF-445A-B73B-D8D0DFCCACEB}.Release|x86.Build.0 = Release|Any CPU
+		{18916D5C-ED74-4D78-AC2C-422C1A0B82D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18916D5C-ED74-4D78-AC2C-422C1A0B82D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18916D5C-ED74-4D78-AC2C-422C1A0B82D6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{18916D5C-ED74-4D78-AC2C-422C1A0B82D6}.Debug|x86.Build.0 = Debug|Any CPU
+		{18916D5C-ED74-4D78-AC2C-422C1A0B82D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18916D5C-ED74-4D78-AC2C-422C1A0B82D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18916D5C-ED74-4D78-AC2C-422C1A0B82D6}.Release|x86.ActiveCfg = Release|Any CPU
+		{18916D5C-ED74-4D78-AC2C-422C1A0B82D6}.Release|x86.Build.0 = Release|Any CPU
+		{63D1F309-9223-4D47-B901-8886E56AE70F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D1F309-9223-4D47-B901-8886E56AE70F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D1F309-9223-4D47-B901-8886E56AE70F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{63D1F309-9223-4D47-B901-8886E56AE70F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{63D1F309-9223-4D47-B901-8886E56AE70F}.Debug|x86.Build.0 = Debug|Any CPU
+		{63D1F309-9223-4D47-B901-8886E56AE70F}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{63D1F309-9223-4D47-B901-8886E56AE70F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D1F309-9223-4D47-B901-8886E56AE70F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D1F309-9223-4D47-B901-8886E56AE70F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{63D1F309-9223-4D47-B901-8886E56AE70F}.Release|x86.ActiveCfg = Release|Any CPU
+		{63D1F309-9223-4D47-B901-8886E56AE70F}.Release|x86.Build.0 = Release|Any CPU
+		{63D1F309-9223-4D47-B901-8886E56AE70F}.Release|x86.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1C8987C-90F1-450F-A3BF-169900869403}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://laboratoriogames.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = NinjaBattle.Domain\\NinjaBattle.Domain.csproj
+		SccProjectName1 = NinjaBattle.Domain
+		SccLocalPath1 = NinjaBattle.Domain
+		SccProjectUniqueName2 = NinjaBattle\\NinjaBattle.Windows.csproj
+		SccProjectName2 = NinjaBattle
+		SccLocalPath2 = NinjaBattle
+		SccProjectUniqueName3 = NinjaBattle.Test\\NinjaBattle.Test.csproj
+		SccProjectName3 = NinjaBattle.Test
+		SccLocalPath3 = NinjaBattle.Test
+		SccProjectUniqueName4 = NinjaBattle.Droid\\NinjaBattle.Droid.csproj
+		SccProjectName4 = NinjaBattle.Droid
+		SccLocalPath4 = NinjaBattle.Droid
+	EndGlobalSection
+EndGlobal
