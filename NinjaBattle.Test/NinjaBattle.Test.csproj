@@ -77,11 +77,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NinjaBattle.Domain\NinjaBattle.Domain.csproj">
-      <Project>{4366A4F0-1BDF-445A-B73B-D8D0DFCCACEB}</Project>
+      <Project>{51132625-d3c4-4b0b-9cf4-f8be2f25b4c5}</Project>
       <Name>NinjaBattle.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NinjaBattle\NinjaBattle.Windows.csproj">
-      <Project>{5658F88D-F916-4FA0-8991-F0C7D0401DC5}</Project>
+    <ProjectReference Include="..\NinjaBattle.Windows\NinjaBattle.Windows.csproj">
+      <Project>{17c301cb-58e0-49a0-9892-89c147e17cbf}</Project>
       <Name>NinjaBattle.Windows</Name>
     </ProjectReference>
   </ItemGroup>
