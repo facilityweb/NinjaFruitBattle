@@ -5,11 +5,15 @@ VisualStudioVersion = 16.0.29001.49
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjaBattle.Test", "NinjaBattle.Test\NinjaBattle.Test.csproj", "{18916D5C-ED74-4D78-AC2C-422C1A0B82D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjaBattle.Domain", "NinjaBattle.Domain\NinjaBattle.Domain.csproj", "{51132625-D3C4-4B0B-9CF4-F8BE2F25B4C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NinjaBattle.Domain", "NinjaBattle.Domain\NinjaBattle.Domain.csproj", "{51132625-D3C4-4B0B-9CF4-F8BE2F25B4C5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjaBattle.Droid", "NinjaBattle.Droid\NinjaBattle.Droid.csproj", "{D49D748D-9DCA-47E2-9D26-38851AE60EBE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjaBattle.Windows", "NinjaBattle.Windows\NinjaBattle.Windows.csproj", "{17C301CB-58E0-49A0-9892-89C147E17CBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMonogameWinForms", "..\..\Users\igor_\OneDrive\Documentos\Projetos\TemplateMonogameWinForms\TemplateMonogameWinForms.csproj", "{C95A146C-F40C-4B4D-BF60-DC1DA7215574}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste", "Teste\Teste.csproj", "{74820EA9-7E22-4F3A-8C99-9BC4786408E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +59,22 @@ Global
 		{17C301CB-58E0-49A0-9892-89C147E17CBF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{17C301CB-58E0-49A0-9892-89C147E17CBF}.Release|x86.ActiveCfg = Release|Any CPU
 		{17C301CB-58E0-49A0-9892-89C147E17CBF}.Release|x86.Build.0 = Release|Any CPU
+		{C95A146C-F40C-4B4D-BF60-DC1DA7215574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C95A146C-F40C-4B4D-BF60-DC1DA7215574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C95A146C-F40C-4B4D-BF60-DC1DA7215574}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C95A146C-F40C-4B4D-BF60-DC1DA7215574}.Debug|x86.Build.0 = Debug|Any CPU
+		{C95A146C-F40C-4B4D-BF60-DC1DA7215574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C95A146C-F40C-4B4D-BF60-DC1DA7215574}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C95A146C-F40C-4B4D-BF60-DC1DA7215574}.Release|x86.ActiveCfg = Release|Any CPU
+		{C95A146C-F40C-4B4D-BF60-DC1DA7215574}.Release|x86.Build.0 = Release|Any CPU
+		{74820EA9-7E22-4F3A-8C99-9BC4786408E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74820EA9-7E22-4F3A-8C99-9BC4786408E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74820EA9-7E22-4F3A-8C99-9BC4786408E2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{74820EA9-7E22-4F3A-8C99-9BC4786408E2}.Debug|x86.Build.0 = Debug|Any CPU
+		{74820EA9-7E22-4F3A-8C99-9BC4786408E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74820EA9-7E22-4F3A-8C99-9BC4786408E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74820EA9-7E22-4F3A-8C99-9BC4786408E2}.Release|x86.ActiveCfg = Release|Any CPU
+		{74820EA9-7E22-4F3A-8C99-9BC4786408E2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
