@@ -12,3 +12,8 @@ Os objetivos específicos deste trabalho são:<br/>
 -Preparar o ambiente para desenvolvimento do monogame;<br/>
 -Codificar o jogo, utilizando o material previamente preparado;<br/>
 -Conseguir reutilizar o código entre as camadas de apresentação;<br/>
+
+# IMAGENS
+![INÍCIO](https://i.imgur.com/2mHcErM.png)
+
+![lANÇAMENTO JACA](https://i.imgur.com/TcpIby7.png)
