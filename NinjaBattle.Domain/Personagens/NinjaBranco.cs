@@ -11,7 +11,7 @@ namespace NinjaBattle.Domain.Personagens
         public override Color Color => Color.White;
 
         public override int HP => 250;
-        
+
         public override double Velocidade => 2;
 
     }

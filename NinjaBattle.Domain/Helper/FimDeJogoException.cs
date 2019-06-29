@@ -1,5 +1,4 @@
-﻿using NinjaBattle.Domain.Personagens;
-using System;
+﻿using System;
 
 namespace NinjaBattle.Domain.Helper
 {

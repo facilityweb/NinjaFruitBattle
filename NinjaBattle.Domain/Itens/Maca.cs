@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 
 namespace NinjaBattle.Domain.Itens
 {
@@ -18,7 +17,7 @@ namespace NinjaBattle.Domain.Itens
         /// Diâmetro mais ou menos de 7 cm
         /// </summary>
         public override Point DanoArea => new Point(7, 7);
-       
+
         public override int DanoHP => Configuracao.DanoCartaTipo1;
 
         public override string NomeSpriteColisao => "danoTipo1";

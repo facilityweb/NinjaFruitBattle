@@ -2,7 +2,7 @@
 
 namespace NinjaBattle.Windows
 {
-//#if WINDOWS || LINUX
+    //#if WINDOWS || LINUX
     /// <summary>
     /// The main class.
     /// </summary>
@@ -18,5 +18,5 @@ namespace NinjaBattle.Windows
                 game.Run();
         }
     }
-//#endif
+    //#endif
 }

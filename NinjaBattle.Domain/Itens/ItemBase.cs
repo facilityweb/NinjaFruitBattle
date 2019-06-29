@@ -64,7 +64,7 @@ namespace NinjaBattle.Domain.Itens
         /// <summary>
         /// Nome da animação no momento da colisão
         /// </summary>
-        abstract public string NomeSpriteColisaoSolo { get; }        
+        abstract public string NomeSpriteColisaoSolo { get; }
         /// <summary>
         /// Nome enquanto esta em lançamento
         /// </summary>
@@ -135,7 +135,7 @@ namespace NinjaBattle.Domain.Itens
         {
             if (statusItem == StatusItem.Arremecando)
             {
-                _spriteBatch.Draw(SpritePadrao, Posicao, null, Color.White, ForcaY * Rotacao,Vector2.Zero, 1, efeito, 0f);
+                _spriteBatch.Draw(SpritePadrao, Posicao, null, Color.White, ForcaY * Rotacao, Vector2.Zero, 1, efeito, 0f);
             }
             else if (statusItem == StatusItem.Colidindo)
             {

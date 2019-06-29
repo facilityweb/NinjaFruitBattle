@@ -115,7 +115,7 @@ namespace NinjaBattle.Domain.Personagens
             }
             else if ((Posicao.Y - 120) > posicaoDoNinjaNoSolo)
             {
-                Posicao.Y --;
+                Posicao.Y--;
                 AceleracaoGravidade = Configuracao.Gravidade;
             }
             else

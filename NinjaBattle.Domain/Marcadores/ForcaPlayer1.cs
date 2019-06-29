@@ -21,7 +21,7 @@ namespace NinjaBattle.Domain.Marcadores
 
         public void AumentarBarraDeForca(int forca)
         {
-            this.AlterarMarcador(Forca + forca*10);
+            this.AlterarMarcador(Forca + forca * 10);
         }
         public int Forca
         {

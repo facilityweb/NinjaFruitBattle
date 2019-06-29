@@ -163,7 +163,7 @@ namespace NinjaBattle.Windows
                     foreach (var item in Ninja1.ItensLancados.Where(x => !x.Invalido))
                     {
                         item.Update(gameTime);
-                        if (Ninja2.ColideCom(item)&& item.PodeMarcarDano)
+                        if (Ninja2.ColideCom(item) && item.PodeMarcarDano)
                         {
                             hPPlayer2.MarcarDano(item.DanoHP);
                             Ninja2.AplicarDano(item.DanoHP);

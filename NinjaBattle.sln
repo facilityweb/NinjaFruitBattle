@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjaBattle.Droid", "NinjaB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjaBattle.Windows", "NinjaBattle.Windows\NinjaBattle.Windows.csproj", "{17C301CB-58E0-49A0-9892-89C147E17CBF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjaFruitBattle.WebApi", "NinjaFruitBattle.WebApi\NinjaFruitBattle.WebApi.csproj", "{ABEA84F0-C33F-466C-87A5-C3543D0AA4DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,14 @@ Global
 		{17C301CB-58E0-49A0-9892-89C147E17CBF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{17C301CB-58E0-49A0-9892-89C147E17CBF}.Release|x86.ActiveCfg = Release|Any CPU
 		{17C301CB-58E0-49A0-9892-89C147E17CBF}.Release|x86.Build.0 = Release|Any CPU
+		{ABEA84F0-C33F-466C-87A5-C3543D0AA4DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABEA84F0-C33F-466C-87A5-C3543D0AA4DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABEA84F0-C33F-466C-87A5-C3543D0AA4DB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ABEA84F0-C33F-466C-87A5-C3543D0AA4DB}.Debug|x86.Build.0 = Debug|Any CPU
+		{ABEA84F0-C33F-466C-87A5-C3543D0AA4DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABEA84F0-C33F-466C-87A5-C3543D0AA4DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABEA84F0-C33F-466C-87A5-C3543D0AA4DB}.Release|x86.ActiveCfg = Release|Any CPU
+		{ABEA84F0-C33F-466C-87A5-C3543D0AA4DB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

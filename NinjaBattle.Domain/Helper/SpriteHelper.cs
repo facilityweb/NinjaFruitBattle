@@ -115,7 +115,7 @@ namespace NinjaBattle.Domain.Helper
             }
             return false;
         }
-        public static bool PerPixelCollision(Color[] bitsA, Color[] bitsB, Rectangle area1, Rectangle area2,int widthA, int widthB)
+        public static bool PerPixelCollision(Color[] bitsA, Color[] bitsB, Rectangle area1, Rectangle area2, int widthA, int widthB)
         {
             // Calculate the intersecting rectangle
             int x1 = Math.Max(area1.X, area2.X);

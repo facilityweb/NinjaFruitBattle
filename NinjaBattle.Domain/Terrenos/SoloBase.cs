@@ -1,8 +1,8 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using NinjaBattle.Domain.Helper;
 using NinjaBattle.Domain.Itens;
+using System;
 
 namespace NinjaBattle.Domain.Terrenos
 {

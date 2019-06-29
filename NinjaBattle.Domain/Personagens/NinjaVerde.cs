@@ -1,7 +1,5 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using NinjaBattle.Domain.Terrenos;
 
 namespace NinjaBattle.Domain.Personagens
 {
