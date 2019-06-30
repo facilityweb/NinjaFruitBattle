@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NinjaFruitBattle.WebApi.Hubs;
 
 namespace NinjaFruitBattle.WebApi
 {
@@ -19,6 +20,7 @@ namespace NinjaFruitBattle.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +37,10 @@ namespace NinjaFruitBattle.WebApi
             }
 
             app.UseHttpsRedirection();
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<BattleHub>("/battleHub");
+            });
             app.UseMvc();
         }
     }

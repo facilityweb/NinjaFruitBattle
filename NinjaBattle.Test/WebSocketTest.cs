@@ -6,6 +6,11 @@ namespace NinjaBattle.Test
     [TestClass]
     public class WebSocketTest
     {
+        [TestInitialize]
+        public void TestMethod()
+        {
+        }
+
         [TestMethod]
         public void TestMethod1()
         {
