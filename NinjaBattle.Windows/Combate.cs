@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using NinjaBattle.Domain;
 using NinjaBattle.Domain.Deck;
 using NinjaBattle.Domain.Helper;
+using NinjaBattle.Domain.Hub;
 using NinjaBattle.Domain.Itens;
 using NinjaBattle.Domain.Marcadores;
 using NinjaBattle.Domain.Personagens;
@@ -74,6 +75,7 @@ namespace NinjaBattle.Windows
             solo = new SoloBase(this, _priteBatch);
             solo.Initialize();
             ceu = Content.Load<Texture2D>("ceu");
+            NetworkConnection.ConnectToHub();
         }
 
         protected override void Initialize()
