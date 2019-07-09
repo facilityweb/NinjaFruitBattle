@@ -10,8 +10,11 @@ namespace NinjaBattle.Windows.Hub
 
         private string ConnectedId;
 
-        public event OnPlayer1Move OnPlayer1Move;
-        public event OnPlayer2Move OnPlayer2Move;
+        public event OnPlayer1MovimentaDireita OnPlayer1MovimentaDireita;
+        public event OnPlayer1MovimentaEsquerda OnPlayer1MovimentaEsquerda;
+        public event OnPlayer2MovimentaDireita OnPlayer2MovimentaDireita;
+        public event OnPlayer2MovimentaEsquerda OnPlayer2MovimentaEsquerda;
+
         public NinjaHub()
         {
 //#if DEBUG
@@ -25,31 +28,48 @@ namespace NinjaBattle.Windows.Hub
 
             characterMoveHub = hubConnection.CreateHubProxy("CharacterMoveHub");
         }
-        public void MovePlayer1(float xPosition)
-        {
-            characterMoveHub.Invoke("MovePlayer1", xPosition);
-        }
-
-        public void MovePlayer2(float xPosition)
-        {
-            characterMoveHub.Invoke("MovePlayer2", xPosition);
-        }
-
         public void Connect()
         {
-            characterMoveHub.On<int>("MovePlayer1", (x) =>
+            characterMoveHub.On<int>("Player1MovimentaDireita", (x) =>
              {
-                 OnPlayer1Move?.Invoke(x);
+                 OnPlayer1MovimentaDireita?.Invoke(x);
              });
-            characterMoveHub.On<int>("MovePlayer2", (x) =>
+            characterMoveHub.On<int>("Player1MovimentaEsquerda", (x) =>
             {
-                OnPlayer2Move?.Invoke(x);
+                OnPlayer1MovimentaEsquerda?.Invoke(x);
+            });
+            characterMoveHub.On<int>("Player2MovimentaDireita", (x) =>
+            {
+                OnPlayer2MovimentaDireita?.Invoke(x);
+            });
+            characterMoveHub.On<int>("Player2MovimentaEsquerda", (x) =>
+            {
+                OnPlayer2MovimentaEsquerda?.Invoke(x);
             });
             characterMoveHub.On<string>("Conected", (connectedId) =>
             {
                 ConnectedId = connectedId;
             });
             hubConnection.Start();
+        }
+
+        public void MovimentarPlayer1Esquerda(float xPosition)
+        {
+            characterMoveHub.Invoke("Player1MovimentaEsquerda", xPosition);
+        }
+
+        public void MovimentarPlayer2Esquerda(float xPosition)
+        {
+            characterMoveHub.Invoke("Player2MovimentaEsquerda", xPosition);
+        }
+        public void MovimentarPlayer1Direita(float xPosition)
+        {
+            characterMoveHub.Invoke("Player1MovimentaDireita", xPosition);
+        }
+
+        public void MovimentarPlayer2Direita(float xPosition)
+        {
+            characterMoveHub.Invoke("Player2MovimentaDireita", xPosition);
         }
     }
 }

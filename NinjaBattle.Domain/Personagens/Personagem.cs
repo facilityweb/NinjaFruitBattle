@@ -167,17 +167,21 @@ namespace NinjaBattle.Domain.Personagens
             this.Posicao.X += Configuracao.MovimentacaoPadrao;
         }
 
-        public void Movimentar(int x)
+        public void NotificarMovimentacaoPlayer1Direita()
         {
-            this.Posicao.X = x;
+            _ninjaHub.MovimentarPlayer1Direita(this.Posicao.X);
         }
-        public void NotificarMovimentacaoPlayer1()
+        public void NotificarMovimentacaoPlayer1Esquerda()
         {
-            _ninjaHub.MovePlayer1(this.Posicao.X);
+            _ninjaHub.MovimentarPlayer1Esquerda(this.Posicao.X);
         }
-        public void NotificarMovimentacaoPlayer2()
+        public void NotificarMovimentacaoPlayer2Direita()
         {
-            _ninjaHub.MovePlayer2(this.Posicao.X);
+            _ninjaHub.MovimentarPlayer2Direita(this.Posicao.X);
+        }
+        public void NotificarMovimentacaoPlayer2Esquerda()
+        {
+            _ninjaHub.MovimentarPlayer2Esquerda(this.Posicao.X);
         }
         public void MovimentarParaEsquerda()
         {
@@ -185,6 +189,7 @@ namespace NinjaBattle.Domain.Personagens
             if (this.Posicao.X > 0)
             {
                 this.Posicao.X -= Configuracao.MovimentacaoPadrao;
+                 _ninjaHub.MovimentarPlayer1Direita(this.Posicao.X);
             }
         }
         public void LancarItem(float forca, ItemBase item)

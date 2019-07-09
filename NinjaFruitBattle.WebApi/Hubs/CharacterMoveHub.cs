@@ -25,13 +25,21 @@ namespace NinjaFruitBattle.WebApi.Hubs
             return base.OnDisconnected(stopCalled);
         }
 
-        public void MovePlayer1(float x)
+        public void Player1MovimentaDireita(float x)
         {
-            Clients.Others.MovePlayer1(x);
+            Clients.Others.Player1MovimentaDireita(x);
         }
-        public void MovePlayer2(float x)
+        public void Player1MovimentaEsquerda(float x)
         {
-            Clients.Others.MovePlayer2(x);
+            Clients.Others.Player1MovimentaEsquerda(x);
+        }
+        public void Player2MovimentaDireita(float x)
+        {
+            Clients.Others.Player2MovimentaDireita(x);
+        }
+        public void Player2MovimentaEsquerda(float x)
+        {
+            Clients.Others.Player2MovimentaEsquerda(x);
         }
         public void Conected(string connectionId)
         {
