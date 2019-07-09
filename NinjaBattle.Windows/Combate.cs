@@ -31,7 +31,7 @@ namespace NinjaBattle.Windows
         public SoloBase solo;
         public Texture2D ceu;
         private KeyboardState oldKbsPlayer1;
-        private INinjaHub _ninjaHub;
+        private readonly INinjaHub _ninjaHub;
         public Combate(INinjaHub ninjaHub)
         {
             graphics = new GraphicsDeviceManager(this);
@@ -46,11 +46,14 @@ namespace NinjaBattle.Windows
         public void InicializarObjetos()
         {
             _ninjaHub.Connect();
+            _ninjaHub.OnPlayer1Move += NinjaHub_OnPlayer1Move;
+            _ninjaHub.OnPlayer2Move += NinjaHub_OnPlayer2Move;
             // tela de escolher os personagens
-            Ninja1 = new NinjaVerde(this, _priteBatch);
+            Ninja1 = new NinjaVerde(this, _priteBatch, _ninjaHub);
             Ninja1.InicializarPlayer1();
             Ninja1.Initialize();
-            Ninja2 = new NinjaRoxo(this, _priteBatch);
+
+            Ninja2 = new NinjaRoxo(this, _priteBatch, _ninjaHub);
             Ninja2.InicializarPlayer2();
             Ninja2.Initialize();
             Ninja2.VirarEsquerda();
@@ -77,6 +80,15 @@ namespace NinjaBattle.Windows
             solo = new SoloBase(this, _priteBatch);
             solo.Initialize();
             ceu = Content.Load<Texture2D>("ceu");
+        }
+        private void NinjaHub_OnPlayer1Move(int x)
+        {
+            Ninja1.Movimentar(x);
+        }
+
+        private void NinjaHub_OnPlayer2Move(int x)
+        {
+            Ninja2.Movimentar(x);
         }
 
         protected override void Initialize()
@@ -112,21 +124,25 @@ namespace NinjaBattle.Windows
                     {
                         Ninja1.VirarDireita();
                         Ninja1.MovimentarParaDireita();
+                        Ninja1.NotificarMovimentacaoPlayer1();
                     }
                     else if (teclado.IsKeyDown(Keys.A))
                     {
                         Ninja1.VirarEsquerda();
                         Ninja1.MovimentarParaEsquerda();
+                        Ninja1.NotificarMovimentacaoPlayer1();
                     }
                     if (teclado.IsKeyDown(Keys.Left))
                     {
                         Ninja2.VirarEsquerda();
                         Ninja2.MovimentarParaEsquerda();
+                        Ninja2.NotificarMovimentacaoPlayer2();
                     }
                     else if (teclado.IsKeyDown(Keys.Right))
                     {
                         Ninja2.VirarDireita();
                         Ninja2.MovimentarParaDireita();
+                        Ninja2.NotificarMovimentacaoPlayer2();
                     }
                     else if (teclado.IsKeyDown(Keys.Space))
                     {

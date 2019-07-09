@@ -2,8 +2,10 @@
 {
     public interface INinjaHub
     {
-        event OnCharacterMove OnCharacterMove;
-        void Move(int xPosition);
+        event OnPlayer1Move OnPlayer1Move;
+        event OnPlayer2Move OnPlayer2Move;
+        void MovePlayer1(float xPosition);
+        void MovePlayer2(float xPosition);
         void Connect();
     }
 }

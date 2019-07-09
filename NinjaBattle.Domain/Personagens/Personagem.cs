@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using NinjaBattle.Domain.Helper;
+using NinjaBattle.Domain.Hub;
 using NinjaBattle.Domain.Itens;
 using NinjaBattle.Domain.Terrenos;
 using System;
@@ -28,12 +29,14 @@ namespace NinjaBattle.Domain.Personagens
         private Point _spriteLancandoAtual;
         private SpriteBatch _spriteBatch;
         private int posicaoDoNinjaNoSolo = 0;
+
+        private INinjaHub _ninjaHub;
         public virtual Rectangle GetArea()
         {
             return new Rectangle((int)Posicao.X, (int)Posicao.Y, (int)(SpriteHelper.GetLarguraSprite(SpritePersonagemParado, 10) * Configuracao.EscalaPersonagem), (int)(SpriteHelper.GetAlturaSprite(SpritePersonagemParado, 7) * Configuracao.EscalaPersonagem));
         }
 
-        public Personagem(Game game, SpriteBatch spriteBatch)
+        public Personagem(Game game, SpriteBatch spriteBatch, INinjaHub ninjaHub)
             : base(game)
         {
             Posicao = new Vector2();
@@ -44,6 +47,7 @@ namespace NinjaBattle.Domain.Personagens
             this.ItensLancados = new List<ItemBase>();
             ControleHP = HP;
             this._spriteLancandoAtual = Point.Zero;
+            _ninjaHub = ninjaHub;
         }
         public void InicializarPlayer1()
         {
@@ -162,11 +166,26 @@ namespace NinjaBattle.Domain.Personagens
             this.StatusPersonagem = StatusPersonagem.Andando;
             this.Posicao.X += Configuracao.MovimentacaoPadrao;
         }
+
+        public void Movimentar(int x)
+        {
+            this.Posicao.X = x;
+        }
+        public void NotificarMovimentacaoPlayer1()
+        {
+            _ninjaHub.MovePlayer1(this.Posicao.X);
+        }
+        public void NotificarMovimentacaoPlayer2()
+        {
+            _ninjaHub.MovePlayer2(this.Posicao.X);
+        }
         public void MovimentarParaEsquerda()
         {
             this.StatusPersonagem = StatusPersonagem.Andando;
             if (this.Posicao.X > 0)
+            {
                 this.Posicao.X -= Configuracao.MovimentacaoPadrao;
+            }
         }
         public void LancarItem(float forca, ItemBase item)
         {
