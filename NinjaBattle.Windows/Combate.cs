@@ -118,6 +118,16 @@ namespace NinjaBattle.Windows
                         Ninja1.VirarEsquerda();
                         Ninja1.MovimentarParaEsquerda();
                     }
+                    if (teclado.IsKeyDown(Keys.Left))
+                    {
+                        Ninja2.VirarEsquerda();
+                        Ninja2.MovimentarParaEsquerda();
+                    }
+                    else if (teclado.IsKeyDown(Keys.Right))
+                    {
+                        Ninja2.VirarDireita();
+                        Ninja1.MovimentarParaDireita();
+                    }
                     else if (teclado.IsKeyDown(Keys.Space))
                     {
                         if (Deck1.Disponivel && forcaPlayer1.Forca <= Configuracao.ForcaMaxima)
