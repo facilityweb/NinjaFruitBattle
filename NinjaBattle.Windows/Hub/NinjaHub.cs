@@ -14,14 +14,14 @@ namespace NinjaBattle.Windows.Hub
         public event OnPlayer2Move OnPlayer2Move;
         public NinjaHub()
         {
-#if DEBUG
+//#if DEBUG
 
-            hubConnection = new HubConnection("http://localhost:59242/");
-#endif
-#if !DEBUG
+//            hubConnection = new HubConnection("http://localhost:59242/");
+//#endif
+//#if !DEBUG
 
             hubConnection = new HubConnection("http://igormonteiro-001-site3.dtempurl.com");
-#endif
+//#endif
 
             characterMoveHub = hubConnection.CreateHubProxy("CharacterMoveHub");
         }
