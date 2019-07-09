@@ -24,7 +24,6 @@ namespace NinjaBattle.Windows
         public Deck2 Deck2;
         public Deck3 Deck3;
         public Deck4 Deck4;
-
         public HPPlayer1 hPPlayer1;
         public HPPlayer2 hPPlayer2;
         public ForcaPlayer1 forcaPlayer1;
@@ -32,7 +31,8 @@ namespace NinjaBattle.Windows
         public SoloBase solo;
         public Texture2D ceu;
         private KeyboardState oldKbsPlayer1;
-        public Combate()
+        private INinjaHub _ninjaHub;
+        public Combate(INinjaHub ninjaHub)
         {
             graphics = new GraphicsDeviceManager(this);
             if (Content != null)
@@ -40,10 +40,12 @@ namespace NinjaBattle.Windows
             graphics.PreferredBackBufferWidth = 800;
             graphics.PreferredBackBufferHeight = 600;
             graphics.PreferMultiSampling = false;
+            _ninjaHub = ninjaHub;
         }
 
         public void InicializarObjetos()
         {
+            _ninjaHub.Connect();
             // tela de escolher os personagens
             Ninja1 = new NinjaVerde(this, _priteBatch);
             Ninja1.InicializarPlayer1();
@@ -75,7 +77,6 @@ namespace NinjaBattle.Windows
             solo = new SoloBase(this, _priteBatch);
             solo.Initialize();
             ceu = Content.Load<Texture2D>("ceu");
-            NetworkConnection.ConnectToHub();
         }
 
         protected override void Initialize()
