@@ -126,7 +126,7 @@ namespace NinjaBattle.Windows
                     else if (teclado.IsKeyDown(Keys.Right))
                     {
                         Ninja2.VirarDireita();
-                        Ninja1.MovimentarParaDireita();
+                        Ninja2.MovimentarParaDireita();
                     }
                     else if (teclado.IsKeyDown(Keys.Space))
                     {
