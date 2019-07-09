@@ -189,7 +189,6 @@ namespace NinjaBattle.Domain.Personagens
             if (this.Posicao.X > 0)
             {
                 this.Posicao.X -= Configuracao.MovimentacaoPadrao;
-                 _ninjaHub.MovimentarPlayer1Direita(this.Posicao.X);
             }
         }
         public void LancarItem(float forca, ItemBase item)
