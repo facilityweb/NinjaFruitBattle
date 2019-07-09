@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.SignalR.Client;
+using NinjaBattle.Windows.Hub;
 using System;
 
 namespace NinjaBattle.Windows
@@ -15,7 +16,7 @@ namespace NinjaBattle.Windows
         [STAThread]
         static void Main()
         {
-            using (var game = new Combate())
+            using (var game = new Combate(new NinjaHub()))
                 game.Run();
         }
     }
